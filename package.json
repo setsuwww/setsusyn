@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "homepage": "https://setsumsc.github.io/reactpp.github.io",
     "@chakra-ui/react": "^3.2.2",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",

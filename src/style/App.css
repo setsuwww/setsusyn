@@ -4,7 +4,7 @@
 
 html, body {
   font-family: 'Sora', sans-serif;
-  overflow: auto; /* Pastikan scroll manual bisa */
+  overflow: auto;
   scroll-behavior: smooth;
 }
 
