@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  font-family: 'Sora', sans-serif;
+  overflow: auto; /* Pastikan scroll manual bisa */
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "DCScript";
+  src: url('../../public/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.DCScript {
+  font-family: "DCScript";
+}
+
+.letter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 2s steps(30) 1s forwards;
+}
+
+.text-wrapper {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.b-animate {
+  @apply hover:scale-110 focus:scale-95 transition transform duration-300
+}
+
+.c-animate {
+  @apply transition ease-in-out duration-300 
+}
+
+.card {
+  position: relative; /* Pastikan pseudo-element berada di dalam card */
+  z-index: 1; /* Konten card di atas pseudo-element */
+}
+
+.gray-effect {
+      width: 50%;
+      height: 50%;
+      transition: filter 0.3s ease;
+      filter: grayscale(100%)
+    }
+    
+.gray-effect:hover {
+      filter: grayscale(0);
+    }
+
+.blend-effect {
+    mix-blend-mode: lighten;
+    transition: mix-blend-mode 0.3s ease;
+  }
+
+.card:hover .blend-effect {
+    mix-blend-mode: screen;
+  }
+
+.active-link {
+  color: #00bfff;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Animasi Gradient Bergelombang */
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave-gradient {
+  display: inline-block;
+  background-image: linear-gradient(90deg, rgba(0, 0, 255, 1) 10%, rgba(128, 0, 128, 1) 50%, rgba(255, 20, 147, 1) 90%);
+  background-size: 200% 100%;
+  animation: waveAnimation 3s ease-in-out infinite;
+
+  background-clip: text;
+  color: transparent;
+  
+  position: relative;
+  z-index: 1;
+}
+
+.wave-gradient::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 0;
+}
+
+.react {
+  filter: drop-shadow(5px 5px 10px rgba(0, 255, 255, 0.3)); /* dari kanan bawah */
+}
+
+.bg-radial {
+  background-image: radial-gradient(
+    circle,
+    #fff,
+    #0ea5e9,
+    #0c4a6e
+  );
+}
+
